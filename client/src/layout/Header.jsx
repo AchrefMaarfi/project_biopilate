@@ -130,9 +130,11 @@ export default function Header() {
               <LuUserCircle2 className="text-2xl" />
               <div className="max-md:hidden">Se connecter</div>
             </button>
-            <button className="flex flex-col justify-center text-base leading-6 rounded-lg px-10 py-4 bg-bgColor max-md:hidden">
-              Réserver
-            </button>
+            <div className="button-wrapper rounded-lg overflow-hidden">
+              <button className="button-content flex-col justify-center text-base leading-6 rounded-lg px-10 py-4 bg-bgColor hidden md:flex text-current transition duration-300 ease-in-out transform">
+                Réserver
+              </button>
+            </div>
           </div>
         </div>
 
