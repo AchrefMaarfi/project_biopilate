@@ -12,7 +12,7 @@ export default function Hero() {
           Découvrez la force dans la fluidité et la grâce dans le mouvement, au
           cœur de Paris, avec notre approche personnalisée du Pilates.
         </p>
-        <button className="flex mr-auto flex-col justify-center text-base rounded-lg px-10 py-4 bg-bgColor text-marron font-lato">
+        <button className=" reserver-button flex mr-auto flex-col justify-center text-base rounded-lg px-10 py-4 bg-bgColor text-marron font-lato">
           Réserver
         </button>
       </div>
@@ -48,14 +48,14 @@ export default function Hero() {
 
         <img
           loading="lazy"
-          src={require("../images/hero-1.jpg")}
+          src={require("../../images/hero-1.jpg")}
           alt="Biopilate trainer"
           className="custom-half-circle-right h-[208px] sm:h-[455px] shadow-lg"
         />
 
         <img
           loading="lazy"
-          src={require("../images/hero-2.jpg")}
+          src={require("../../images/hero-2.jpg")}
           alt="Biopilate trainer"
           className="custom-half-circle-left h-[160px] sm:h-[350px] shadow-lg pt-2"
         />

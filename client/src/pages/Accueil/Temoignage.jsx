@@ -7,7 +7,7 @@ export default function Temoignage() {
       <div className="flex gap-4">
         <img
           loading="lazy"
-          src={require("../images/biopilate-logo.png")}
+          src={require("../../images/biopilate-logo.png")}
           alt="User"
           className="rounded-full w-[60px] h-[60px]"
         />

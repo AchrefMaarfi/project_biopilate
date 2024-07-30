@@ -24,3 +24,27 @@
 .custom-half-circle-right {
   clip-path: circle(50.0% at 100% 50%);
 }
+
+.reserver-button {
+  position: relative;
+  background-color: white;
+  color: white;
+  border-radius: 50%;
+  transition: 0.3s ease-in-out;
+}
+
+.reserver-button:hover {
+  background-color: #756E66;
+  color: white;
+}
+
+.button-hover{
+
+  transition: 0.3s ease-in-out;
+
+}
+.button-hover:hover {
+  background-color: #EBDCCD;
+  color:#756E66;
+  font-size: large;
+}

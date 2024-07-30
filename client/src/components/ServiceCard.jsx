@@ -24,7 +24,7 @@ export default function ServiceCard() {
           />
           <p className="text-xs text-gray-500">Nom d'utilisateur</p>
         </div>
-        <button className="flex ml-auto flex-col justify-center text-xs rounded-lg px-4 py-1 bg-bgColor text-marron">
+        <button className="reserver-button flex ml-auto flex-col justify-center text-xs rounded-lg px-4 py-1 bg-bgColor text-marron">
           Réserver
         </button>
       </div>

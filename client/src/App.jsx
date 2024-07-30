@@ -3,12 +3,12 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import "./App.css";
 import Header from "./layout/Header";
 import Footer from "./layout/Footer";
-import Accueil from "./pages/Accueil";
-import Apropos from "./pages/Apropos";
-import Cours from "./pages/Cours";
-import Blog from "./pages/Blog";
-import Contact from "./pages/Contact";
-import Formations from "./pages/Formations";
+import Accueil from "./pages/Accueil/Accueil";
+import Apropos from "./pages/Apropos/Apropos";
+import Cours from "./pages/Cours/Cours";
+import Blog from "./pages/Blog/Blog";
+import Contact from "./pages/Contact/Contact";
+import Formations from "./pages/Formations/Formations";
 
 export default function App() {
   return (

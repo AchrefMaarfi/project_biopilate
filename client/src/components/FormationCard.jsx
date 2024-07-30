@@ -23,7 +23,7 @@ export default function FormationCard() {
         </div>
       </div>
 
-      <button className="flex flex-col justify-center rounded-lg mb-4 px-24 py-3 bg-bgColor text-marron">
+      <button className="reserver-button flex flex-col justify-center rounded-lg mb-4 px-24 py-3 bg-bgColor text-marron">
         Réserver
       </button>
     </div>

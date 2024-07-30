@@ -10,14 +10,14 @@ export default function Engagement() {
         <div className="justify-center items-center gap-4 mr-4 rounded-full w-[402px] h-[402px] pr-9 hidden md:flex">
           <img
             loading="lazy"
-            src={require("../images/engagement-1.jpg")}
+            src={require("../../images/engagement-1.jpg")}
             alt="Biopilate trainer"
             className="custom-half-circle-right h-[402px] shadow-lg"
           />
 
           <img
             loading="lazy"
-            src={require("../images/engagement-2.jpg")}
+            src={require("../../images/engagement-2.jpg")}
             alt="Biopilate trainer"
             className="custom-half-circle-left h-[314px] shadow-lg pt-4"
           />

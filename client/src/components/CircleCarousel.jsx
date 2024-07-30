@@ -1,15 +1,7 @@
 import React, { useState } from "react";
 import "tailwindcss/tailwind.css";
 
-export default function Carousel() {
-  const images = [
-    require("../images/caroline-1.jpg"),
-    require("../images/caroline-2.jpg"),
-    require("../images/caroline-3.jpg"),
-    require("../images/caroline-4.jpg"),
-    require("../images/caroline-5.jpg"),
-  ];
-
+export default function Carousel({ images }) {
   const [currentIndex, setCurrentIndex] = useState(0);
 
   const prevSlide = () => {

@@ -1,13 +1,14 @@
 import React from "react";
-import ServiceCard from "../components/ServiceCard";
-import FormationCard from "../components/FormationCard";
+import ServiceCard from "../../components/ServiceCard";
+import FormationCard from "../../components/FormationCard";
 import { FaArrowLeftLong, FaArrowRightLong } from "react-icons/fa6";
-import Temoignage from "../components/Temoignage";
-import Hero from "../components/Hero";
-import Engagement from "../components/Engagement";
-import CallToActionImg from "../components/CallToActionImg";
-import BlogCard from "../components/BlogCard";
-import FAQ from "../components/FAQ";
+import Temoignage from "./Temoignage";
+import Hero from "./Hero";
+import Engagement from "./Engagement";
+import CallToActionImg from "./CallToActionImg";
+import BlogCard from "../../components/BlogCard";
+import FAQ from "./FAQ";
+import "../../../src/App.css";
 
 // const services = [
 //   {
@@ -37,7 +38,7 @@ export default function Accueil() {
           </p>
           <img
             loading="lazy"
-            src={require("../images/gym.jpg")}
+            src={require("../../images/gym.jpg")}
             alt="Gym"
             className="rounded-full w-[220px] h-[220px] sm:w-[312px] sm:h-[312px] md:hidden mb-2"
           />
@@ -62,7 +63,7 @@ export default function Accueil() {
         </div>
         <img
           loading="lazy"
-          src={require("../images/gym.jpg")}
+          src={require("../../images/gym.jpg")}
           alt="Gym"
           className="rounded-full w-[220px] h-[220px] sm:w-[312px] sm:h-[312px] hidden md:block"
         />
@@ -147,15 +148,10 @@ export default function Accueil() {
         </div>
       </section>
       {/* CTA */}
-      <section
-        className="mb-16 justify-center items-center w-full h-[200px] md:h-[410px]"
-        // style={{
-        //   backgroundImage: `url(${require("../images/bg-img-reserver.jpg")})`,
-        // }}
-      >
+      <section className="mb-16 justify-center items-center w-full h-[200px] md:h-[410px]">
         <img
           className="w-full h-full object-cover rounded-md"
-          src={require("../images/bg-img-reserver.jpg")}
+          src={require("../../images/bg-img-reserver.jpg")}
           alt=""
         />
         <div className="flex justify-between gap-4 mt-[-165px] md:mt-[-380px] z-[1] mx-6 sm:mx-10">
@@ -165,10 +161,10 @@ export default function Accueil() {
               découvrir les bienfaits du Pilates.
             </p>
             <div className="flex gap-2">
-              <button className="flex flex-col justify-center sm:text-base rounded-lg px-4 sm:px-8 sm:py-3 bg-white shadow-sm">
+              <button className="button-hover flex flex-col justify-center text-marron sm:text-base rounded-lg px-4 sm:px-8 sm:py-3 bg-white shadow-sm">
                 Réserver
               </button>
-              <button className="flex flex-col justify-center text-white sm:text-base rounded-lg px-8 py-3 border border-solid border-white shadow-sm">
+              <button className="button-hover flex flex-col justify-center text-white sm:text-base rounded-lg px-8 py-3 border border-solid border-white shadow-sm">
                 Contactez-nous
               </button>
             </div>

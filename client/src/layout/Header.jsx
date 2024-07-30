@@ -2,6 +2,7 @@ import { React, useState } from "react";
 
 import { IoMdSearch, IoIosMenu } from "react-icons/io";
 import { LuUserCircle2 } from "react-icons/lu";
+import "../../src/App.css";
 
 const navItems = [
   { label: "Accueil", href: "/" },
@@ -11,41 +12,6 @@ const navItems = [
   { label: "Blog", href: "/blog" },
   { label: "Contact", href: "/contact" },
 ];
-
-function SearchBar() {
-  const [showSearch, setShowSearch] = useState(false);
-
-  return (
-    <div className="flex flex-col justify-center">
-      {!showSearch && (
-        <button className="py-7" onClick={() => setShowSearch(!showSearch)}>
-          <IoMdSearch className="text-2xl text-stone-500" />
-        </button>
-      )}
-      {showSearch && (
-        <div>
-          <div className="flex flex-row justify-center items-center">
-            {/* Search Bar */}
-            <input
-              type="text"
-              className="border-b border-gray-300 focus:border-gray-500 outline-none px-4 py-2"
-              placeholder="Search..."
-            />
-            <button className="py-7" onClick={() => setShowSearch(!showSearch)}>
-              <IoMdSearch className="text-2xl text-stone-500" />
-            </button>
-          </div>
-
-          {/* Recent Search Items */}
-          <div className="">
-            <div>Item 1</div>
-            <div>Item 2</div>
-          </div>
-        </div>
-      )}
-    </div>
-  );
-}
 
 export default function Header() {
   const [showSearch, setShowSearch] = useState(false);
@@ -131,7 +97,7 @@ export default function Header() {
               <div className="max-md:hidden">Se connecter</div>
             </button>
             <div className="button-wrapper rounded-lg overflow-hidden">
-              <button className="button-content flex-col justify-center text-base leading-6 rounded-lg px-10 py-4 bg-bgColor hidden md:flex text-current transition duration-300 ease-in-out transform">
+              <button className="reserver-button button-content flex-col justify-center text-base leading-6 rounded-lg px-10 py-4 bg-bgColor hidden md:flex text-current transition duration-300 ease-in-out transform">
                 Réserver
               </button>
             </div>

@@ -1,7 +1,36 @@
 import React from "react";
-import CircleCarousel from "../components/CircleCarousel";
+import CircleCarousel from "../../components/CircleCarousel";
+import ImageSlider from "../../components/ImageSlider";
 
 export default function Apropos() {
+  const images = [
+    require("../../images/caroline-1.jpg"),
+    require("../../images/caroline-2.jpg"),
+    require("../../images/caroline-3.jpg"),
+    require("../../images/caroline-4.jpg"),
+    require("../../images/caroline-5.jpg"),
+  ];
+
+  const list = [
+    {
+      title: "STOTT PILATES",
+      image: require("../../images/stott.jpg"),
+      description:
+        "Est une méthode d'entraînement précise et efficace pour renforcer le corps et améliorer la posture.",
+    },
+    {
+      title: "Gyrotonic",
+      image: require("../../images/gyrotonic.jpg"),
+      description:
+        "Combine la force du Pilates et la fluidité du Gyrotonic pour améliorer la posture, la flexibilité et le bien-être.",
+    },
+    {
+      title: "Evolis",
+      image: require("../../images/evolis.jpg"),
+      description:
+        "Est une méthode innovante alliant Pilates et équipements évolutifs pour améliorer force, flexibilité et posture.",
+    },
+  ];
   return (
     <div className="flex flex-col mx-8 md:mx-12">
       {/* Bio */}
@@ -9,20 +38,20 @@ export default function Apropos() {
         {/* <div className="flex  ">
           <img
             loading="lazy"
-            src={require("../images/caroline-1.jpg")}
+            src={require("../../images/caroline-1.jpg")}
             alt="Gym"
             className="rounded-full w-[220px] h-[220px] sm:w-[312px] sm:h-[312px] object-cover"
           />
           <img
             loading="lazy"
-            src={require("../images/caroline-2.jpg")}
+            src={require("../../images/caroline-2.jpg")}
             alt="Gym"
             className="rounded-full w-[220px] h-[220px] sm:w-[312px] sm:h-[312px] object-cover"
           />
         </div> */}
         {/* carousel */}
 
-        <CircleCarousel />
+        <CircleCarousel images={images} />
 
         {/* text bio */}
         <div className="flex flex-col items-center md:items-baseline py-6 min-w-min md:px-5 gap-5 font-lato">
@@ -35,76 +64,47 @@ export default function Apropos() {
           </p>
           <div className="text-base">
             <p className="leading-7">
-              Caroline est une experte en Pilates et en mouvement avec plus de
-              15 ans d’expérience. Fondatrice du Studio Biopilates, elle est
-              spécialisée dans la méthode STOTT PILATES et propose des
-              entraînements personnalisés pour tous niveaux.
+              Caroline est une experte en Pilates et en mouvement avec{" "}
+              <strong>plus de 15 ans d’expérience.</strong> Fondatrice du Studio
+              Biopilates, elle est{" "}
+              <strong>spécialisée dans la méthode STOTT PILATES</strong> et
+              propose des entraînements personnalisés pour tous niveaux.
             </p>
             <p className="leading-7">
-              Formée en Gyrotonic, Evolis et Etiopathie, Caroline s'est
-              également perfectionnée en biomécanique pour proposer une approche
-              holistique du mouvement.
+              Formée en <strong>Gyrotonic, Evolis</strong> et{" "}
+              <strong>Etiopathie</strong>, Caroline s'est également
+              perfectionnée en <strong>biomécanique</strong> pour proposer une
+              approche holistique du mouvement.
             </p>
             <p className="leading-7">
               Animée par la passion de la danse, Caroline se consacre aux
-              danseurs et aide les gens à trouver un moyen sans douleur de
-              rester en bonne santé et actif.
+              danseurs et aide les gens à trouver un moyen{" "}
+              <strong>sans douleur</strong> de rester en{" "}
+              <strong>bonne santé</strong> et <strong>actif</strong>.
             </p>
             <p className="leading-7">
-              Son label de qualité Biopilates - Bio de La Biomécanique est un
-              gage de l'excellence de ses cours et de son engagement à offrir
-              une expérience unique à ses clients.
+              <strong>
+                Son label de qualité Biopilates - Bio de La Biomécanique
+              </strong>{" "}
+              est un gage de l'excellence de ses cours et de son engagement à
+              offrir une expérience unique à ses clients.
             </p>
           </div>
         </div>
       </section>
 
       {/* Approches */}
-
-      <section className="mb-14">
-        <div className="mb-8">
-          <p className="text-marron text-3xl leading-snug">
-            Des approches uniques : Stott Pilates®, Gyrotonic, Evolis
-          </p>
-          <p className="leading-7">
-            Biopilates se distingue par son approche unique et personnalisée,
-            combinant différentes techniques pour un bien-être optimal.
-            Découvrez nos trois disciplines phares :
-          </p>
-        </div>
-        <div className="flex gap-10 flex-wrap">
-          <div className="flex flex-col my-14 sm:my-20 px-3 xl:px-2 md:px-5 sm:w-[40%] gap-5 font-lato">
-            <p className="text-marron text-3xl leading-snug">STOTT PILATES</p>
-            <p className="leading-7">
-              Est une méthode d'entraînement précise et efficace pour renforcer
-              le corps et améliorer la posture.
-            </p>
-            <button className="flex mr-auto flex-col justify-center text-base rounded-lg px-10 py-4 bg-bgColor text-marron font-lato">
-              Réserver
-            </button>
-          </div>
-          <div className="flex items-baseline gap-10">
-            <img
-              loading="lazy"
-              src={require("../images/stott.jpg")}
-              alt="Gym"
-              className="rounded-lg w-[220px] h-[220px] sm:w-[300px] sm:h-[450px] object-cover"
-            />
-            <img
-              loading="lazy"
-              src={require("../images/caroline-2.jpg")}
-              alt="Gym"
-              className="rounded-lg w-[220px] h-[220px] sm:w-[240px] sm:h-[346px] object-cover"
-            />
-            <img
-              loading="lazy"
-              src={require("../images/caroline-3.jpg")}
-              alt="Gym"
-              className="rounded-lg w-[220px] h-[220px] sm:w-[240px] sm:h-[346px] object-cover overflow-hidden"
-            />
-          </div>
-        </div>
-      </section>
+      <div className="mb-8">
+        <p className="text-marron text-3xl leading-snug">
+          Des approches uniques : Stott Pilates®, Gyrotonic, Evolis
+        </p>
+        <p className="leading-7">
+          Biopilates se distingue par son approche unique et personnalisée,
+          combinant différentes techniques pour un bien-être optimal. Découvrez
+          nos trois disciplines phares :
+        </p>
+      </div>
+      <ImageSlider list={list} />
 
       {/* Biopilates */}
 

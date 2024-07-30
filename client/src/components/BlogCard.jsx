@@ -50,7 +50,7 @@ export default function BlogCard() {
         </div>
       </div>
 
-      <button className="flex mb-3  flex-col justify-center items-center text-base rounded-lg w-[90%] py-2 bg-bgColor text-marron ">
+      <button className="reserver-button flex mb-3 flex-col justify-center items-center text-base rounded-lg w-[90%] py-2 bg-bgColor text-marron ">
         Lire la suite
       </button>
     </div>
