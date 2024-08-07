@@ -2,7 +2,7 @@ import React from "react";
 
 export default function ServiceCard() {
   return (
-    <div className="flex flex-col justify-center items-center mx-8 shadow-md gap-5">
+    <div className="flex flex-col justify-center items-center rounded-lg mx-8 shadow-md gap-5">
       <div className="px-10 py-6 flex flex-col justify-center items-center gap-4">
         <img
           loading="lazy"

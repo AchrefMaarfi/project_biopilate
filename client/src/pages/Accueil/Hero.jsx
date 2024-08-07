@@ -4,7 +4,7 @@ export default function Hero() {
   return (
     <section className="mt-14 mb-20 flex flex-wrap justify-center lg:justify-between gap-5">
       <div className="flex flex-col my-14 sm:my-20 px-3 xl:px-2 md:px-5  w-[600px] gap-5 font-lato">
-        <p className="text-marron text-3xl leading-snug">
+        <p className="text-marron text-3xl leading-10 font-bold font-ebGaramond">
           <div>Équilibre et Élégance : </div>
           BioPilates votre Studio de Pilates à Paris
         </p>

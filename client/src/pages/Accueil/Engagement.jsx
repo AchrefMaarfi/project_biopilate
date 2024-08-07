@@ -3,7 +3,7 @@ import React from "react";
 export default function Engagement() {
   return (
     <section className="mb-14 2xl:mx-6">
-      <p className="text-blueText text-2xl mb-20">
+      <p className="text-blueText text-2xl mb-20 font-ebGaramond">
         Engagement envers nos clients
       </p>
       <div className="flex justify-center flex-row flex-wrap gap-2 md:gap-10 2xl:gap-8">

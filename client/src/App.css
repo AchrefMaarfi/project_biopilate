@@ -48,3 +48,13 @@
   color:#756E66;
   font-size: large;
 }
+
+.text-hover{
+  transition: 0.2s ease-in-out;
+  color:black;
+  font-weight: 400;
+}
+.text-hover:hover{
+  color:#756E66;
+  font-weight: 500;
+}

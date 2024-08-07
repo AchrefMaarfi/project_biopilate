@@ -9,6 +9,7 @@ import Cours from "./pages/Cours/Cours";
 import Blog from "./pages/Blog/Blog";
 import Contact from "./pages/Contact/Contact";
 import Formations from "./pages/Formations/Formations";
+import Article from "./pages/Blog/Article";
 
 export default function App() {
   return (
@@ -22,6 +23,7 @@ export default function App() {
           <Route path="/formations" element={<Formations />}></Route>
           <Route path="/blog" element={<Blog />}></Route>
           <Route path="/contact" element={<Contact />}></Route>
+          <Route path="/article" component={<Article />} />
         </Routes>
       </BrowserRouter>
       <Footer></Footer>

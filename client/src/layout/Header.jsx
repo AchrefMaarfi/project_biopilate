@@ -40,7 +40,7 @@ export default function Header() {
                 <a
                   key={index}
                   href={item.href}
-                  className={`py-1.5 ${
+                  className={`py-1.5 text-hover ${
                     window.location.pathname === item.href
                       ? "custom-underline"
                       : ""
@@ -94,7 +94,7 @@ export default function Header() {
           <div className="flex gap-4 pl-auto font-bold text-center text-stone-500">
             <button className="flex items-center justify-center gap-3 my-auto text-lg">
               <LuUserCircle2 className="text-2xl" />
-              <div className="max-md:hidden">Se connecter</div>
+              <div className="max-md:hidden leading-5">Se connecter</div>
             </button>
             <div className="button-wrapper rounded-lg overflow-hidden">
               <button className="reserver-button button-content flex-col justify-center text-base leading-6 rounded-lg px-10 py-4 bg-bgColor hidden md:flex text-current transition duration-300 ease-in-out transform">

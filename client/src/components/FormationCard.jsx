@@ -1,24 +1,33 @@
 import React from "react";
 
-export default function FormationCard() {
+export default function FormationCard({ formation }) {
+  const isLevelNotFound = !formation.levels?.[0] || !formation.levels?.[1];
   return (
-    <div className="flex flex-col justify-center items-center shadow-md">
-      <div className="px-6 py-6 flex flex-col justify-center items-center gap-5">
+    <div className="flex flex-col justify-center items-center w-[300px] h-[524px] rounded-lg shadow-lg">
+      <div className="px-6 py-6 flex flex-col justify-center items-center gap-8">
         <img
           loading="lazy"
-          src={require("../images/gym.jpg")}
+          src={formation.image}
           alt="Gym"
-          className="rounded-full w-[240px] h-[240px]"
+          className="rounded-full w-[240px] h-[240px] object-cover shadow-lg"
         />
-        <p className="text-marron text-xl">Reformer</p>
-        <div className="flex gap-4">
-          <div className="flex flex-col gap-1">
-            <p className="text-sm">2299 €</p>
-            <p className="text-sm">999 €</p>
-          </div>
-          <div className="flex flex-col gap-1">
-            <p className="text-sm">Débutant et intermédiaire</p>
-            <p className="text-sm">Avancé</p>
+        <div className="flex flex-col gap-6">
+          <p className="text-marron text-xl text-center font-bold">
+            {formation.title}
+          </p>
+          <div className="flex gap-6">
+            <div
+              className={`flex flex-col gap-1 ${
+                isLevelNotFound ? "justify-center items-center" : ""
+              }`}
+            >
+              <p className="text-sm">{formation.prices[0]}</p>
+              <p className="text-sm">{formation.prices[1]}</p>
+            </div>
+            <div className="flex flex-col gap-1">
+              <p className="text-sm">{formation.levels?.[0] || ""}</p>
+              <p className="text-sm">{formation.levels?.[1] || ""}</p>
+            </div>
           </div>
         </div>
       </div>

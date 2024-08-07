@@ -104,7 +104,7 @@ export default function Apropos() {
           nos trois disciplines phares :
         </p>
       </div>
-      <ImageSlider list={list} />
+      <ImageSlider list={list} action={"Réserver"} />
 
       {/* Biopilates */}
 

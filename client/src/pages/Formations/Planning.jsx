@@ -1,5 +1,5 @@
 import React from "react";
-import tarifs from "../../data/tarifs.json"; // Adjust the path as necessary
+import PlanningCard from "./PlanningCard";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/swiper-bundle.css";
 import "swiper/css";
@@ -7,12 +7,9 @@ import "swiper/css/pagination";
 import "../../styles/swiper.css";
 import SwiperCore, { Pagination } from "swiper/core";
 
-export default function Offres({ images }) {
+export default function Planning({ list }) {
   return (
     <div>
-      <p className="text-marron text-3xl leading-snug mb-6">
-        Nos offres - tarifs
-      </p>
       <Swiper
         className="centered-slide-carousel swiper-container relative"
         centeredSlides={true}
@@ -60,13 +57,9 @@ export default function Offres({ images }) {
         }}
       >
         <div className="flex flex-nowrap gap-8 overflow-hidden">
-          {images.map((image, index) => (
+          {list.map((plan, index) => (
             <SwiperSlide key={index}>
-              <img
-                src={image}
-                alt={`Slide ${index}`}
-                className="rounded-full w-[220px] h-[220px] sm:w-[312px] sm:h-[312px] object-cover"
-              />
+              <PlanningCard key={index} plans={plan} />
             </SwiperSlide>
           ))}
         </div>

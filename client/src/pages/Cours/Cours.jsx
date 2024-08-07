@@ -1,5 +1,6 @@
 import React from "react";
 import CircleCarousel from "../../components/CircleCarousel";
+import CircleSwiperCarousel from "../../components/CircleSwiperCarousel";
 import ImageSlider from "../../components/ImageSlider";
 import Offres from "./Offres";
 
@@ -12,7 +13,7 @@ export default function Cours() {
     require("../../images/cours-2.jpg"),
   ];
 
-  const list = [
+  const cours = [
     {
       title: "COURS REFORMER",
       image: require("../../images/reformer.jpg"),
@@ -33,109 +34,13 @@ export default function Cours() {
     },
   ];
 
-  const tarifs = [
-    {
-      title: "Pack 4 crédits",
-      price: "100 €",
-      pack1: "4 cours reformer collectifs",
-      pack2: "Ou",
-      pack3: "2 cours reformer gyrotonic",
-      validity: "Validité 2 mois",
-    },
-    {
-      title: "Pack 4 crédits",
-      price: "100 €",
-      pack1: "4 cours reformer collectifs",
-      pack2: "Ou",
-      pack3: "2 cours reformer gyrotonic",
-      validity: "Validité 2 mois",
-    },
-    {
-      title: "Pack 4 crédits",
-      price: "100 €",
-      pack1: "4 cours reformer collectifs",
-      pack2: "Ou",
-      pack3: "2 cours reformer gyrotonic",
-      validity: "Validité 2 mois",
-    },
-    {
-      title: "Pack 4 crédits",
-      price: "100 €",
-      pack1: "4 cours reformer collectifs",
-      pack2: "Ou",
-      pack3: "2 cours reformer gyrotonic",
-      validity: "Validité 2 mois",
-    },
-    {
-      title: "Pack 4 crédits",
-      price: "100 €",
-      pack1: "4 cours reformer collectifs",
-      pack2: "Ou",
-      pack3: "2 cours reformer gyrotonic",
-      validity: "Validité 2 mois",
-    },
-    {
-      title: "Pack 4 crédits",
-      price: "100 €",
-      pack1: "4 cours reformer collectifs",
-      pack2: "Ou",
-      pack3: "2 cours reformer gyrotonic",
-      validity: "Validité 2 mois",
-    },
-    {
-      title: "Pack 4 crédits",
-      price: "100 €",
-      pack1: "4 cours reformer collectifs",
-      pack2: "Ou",
-      pack3: "2 cours reformer gyrotonic",
-      validity: "Validité 2 mois",
-    },
-    {
-      title: "Pack 4 crédits",
-      price: "100 €",
-      pack1: "4 cours reformer collectifs",
-      pack2: "Ou",
-      pack3: "2 cours reformer gyrotonic",
-      validity: "Validité 2 mois",
-    },
-    {
-      title: "Pack 4 crédits",
-      price: "100 €",
-      pack1: "4 cours reformer collectifs",
-      pack2: "Ou",
-      pack3: "2 cours reformer gyrotonic",
-      validity: "Validité 2 mois",
-    },
-    {
-      title: "Pack 4 crédits",
-      price: "100 €",
-      pack1: "4 cours reformer collectifs",
-      pack2: "Ou",
-      pack3: "2 cours reformer gyrotonic",
-      validity: "Validité 2 mois",
-    },
-  ];
-
   return (
     <div className="flex flex-col mx-8 md:mx-12">
       <section className="my-14 flex flex-col-reverse lg:flex-row justify-center lg:justify-between gap-8">
-        {/* <div className="flex  ">
-          <img
-            loading="lazy"
-            src={require("../../images/caroline-1.jpg")}
-            alt="Gym"
-            className="rounded-full w-[220px] h-[220px] sm:w-[312px] sm:h-[312px] object-cover"
-          />
-          <img
-            loading="lazy"
-            src={require("../../images/caroline-2.jpg")}
-            alt="Gym"
-            className="rounded-full w-[220px] h-[220px] sm:w-[312px] sm:h-[312px] object-cover"
-          />
-        </div> */}
         {/* carousel */}
 
         <CircleCarousel images={images} />
+        {/* <CircleSwiperCarousel images={images} /> */}
 
         {/* text */}
         <div className="flex flex-col items-center md:items-baseline py-6 min-w-min md:px-5 gap-5 font-lato">
@@ -171,7 +76,7 @@ export default function Cours() {
             Bsport !
           </p>
         </div>
-        <ImageSlider list={list} />
+        <ImageSlider list={cours} action={"Réserver"} />
       </section>
 
       {/* mobile app */}

@@ -1,6 +1,5 @@
 import React from "react";
 import ServiceCard from "../../components/ServiceCard";
-import FormationCard from "../../components/FormationCard";
 import { FaArrowLeftLong, FaArrowRightLong } from "react-icons/fa6";
 import Temoignage from "./Temoignage";
 import Hero from "./Hero";
@@ -9,6 +8,7 @@ import CallToActionImg from "./CallToActionImg";
 import BlogCard from "../../components/BlogCard";
 import FAQ from "./FAQ";
 import "../../../src/App.css";
+import Formation from "./Formation";
 
 // const services = [
 //   {
@@ -31,9 +31,9 @@ export default function Accueil() {
       {/* Hero */}
       <Hero />
       {/* Intro */}
-      <section className="mb-14 flex flex-col-reverse sm:flex-row flex-wrap justify-center lg:justify-between gap-10">
+      <section className="mb-14 flex flex-col-reverse sm:flex-row flex-wrap justify-center lg:justify-between gap-10 font-lato">
         <div className="flex flex-col items-center md:items-baseline py-6  md:px-5 lg:w-[60%] gap-5 font-lato">
-          <p className="text-marron text-xl sm:text-3xl leading-snug ">
+          <p className="text-marron text-xl sm:text-3xl leading-10 font-bold opacity-75 font-ebGaramond">
             Studio Biopilates Paris, votre havre de paix dédié au mieux être
           </p>
           <img
@@ -44,20 +44,23 @@ export default function Accueil() {
           />
           <div className="text-sm sm:text-base">
             <p className="leading-7">
-              Premier studio STOTT Pilates en France, nous vous offrons une
-              expérience unique pour une transformation physique et mentale
-              profonde.
+              Premier studio <strong>STOTT Pilates</strong> en France, nous vous
+              offrons une expérience unique pour une transformation physique et
+              mentale profonde.
             </p>
             <p className="leading-7">
-              Cours de Pilates pour tous niveaux Reformer , Reformer et
-              Gyrotonic , Reformer Gyrotonic et Evolis dispensés par des
-              instructeurs certifiés.
+              Cours de Pilates pour tous niveaux{" "}
+              <strong>
+                Reformer , Reformer et Gyrotonic , Reformer Gyrotonic
+              </strong>{" "}
+              et Evolis dispensés par des{" "}
+              <strong>instructeurs certifiés</strong>.
             </p>
             <p className="leading-7">
               Renforcez vos muscles, perdez du poids, développez votre souplesse
               et atteignez vos objectifs grâce à nos cours de Pilates
-              personnalisés. Profitez d'une séance découverte et laissez-vous
-              guider sur la voie du bien-être.
+              personnalisés. Profitez d'une <strong>séance découverte</strong>{" "}
+              et laissez-vous guider sur la voie du bien-être.
             </p>
           </div>
         </div>
@@ -71,15 +74,22 @@ export default function Accueil() {
 
       {/* Services */}
       <section className="mb-20 flex flex-col justify-center items-center gap-4 ">
-        <p className="text-marron text-3xl">Nos services</p>
-        <p className="text-blueText text-xl">
+        <p className="text-marron text-3xl font-bold font-ebGaramond">
+          Nos services
+        </p>
+        <p className="text-blueText text-2xl font-bold font-ebGaramond">
           Cours de Pilates pour tous niveaux
         </p>
-        <p className=" md:mx-20 text-center">
-          Découvrez une transformation de votre bien-être physique et mental
-          grâce à nos cours de Pilates. Chaque mouvement vous guide vers une
-          vitalité et une harmonie intérieure.
-        </p>
+        <div>
+          <p className=" md:mx-20 text-center text-xl">
+            Découvrez une transformation de votre bien-être physique et mental
+            grâce à nos cours de Pilates.
+          </p>
+          <p className=" md:mx-20 text-center text-xl">
+            Chaque mouvement vous guide vers une vitalité et une harmonie
+            intérieure.
+          </p>
+        </div>
         <div className="flex flex-wrap justify-center mt-4 2xl:gap-7">
           <ServiceCard></ServiceCard>
           <ServiceCard></ServiceCard>
@@ -88,32 +98,8 @@ export default function Accueil() {
       </section>
 
       {/* Formations */}
+      <Formation />
 
-      <section className="mb-16 flex flex-col justify-center items-center gap-4 md:gap-2">
-        <p className="text-blueText text-2xl">
-          Formations professionnelles pour devenir instructeur Pilates
-        </p>
-        <p className=" md:mx-40 text-center ">
-          Explorez les bénéfices de sélectionner notre centre pour votre
-          formation en Pilates : Nos programmes de premier ordre sont dirigés
-          par des instructeurs chevronnés qui vous guideront tout au long de
-          votre parcours.
-        </p>
-        <div className="flex flex-wrap justify-center mt-6 gap-2 2xl:gap-8">
-          <FormationCard></FormationCard>
-          <FormationCard></FormationCard>
-          <FormationCard></FormationCard>
-          <FormationCard></FormationCard>
-        </div>
-        <div className="flex gap-3 m-3">
-          <button className="flex justify-center items-center bg-bgColor rounded-full w-10 h-10">
-            <FaArrowLeftLong className="text-marron" />
-          </button>
-          <button className="flex justify-center items-center bg-bgColor rounded-full w-10 h-10">
-            <FaArrowRightLong className="text-marron" />
-          </button>
-        </div>
-      </section>
       {/* Engagement */}
       <Engagement />
       {/* Temoignages */}
@@ -133,7 +119,9 @@ export default function Accueil() {
             />
           </svg>
           <div className="flex flex-col justify-center items-center gap-4">
-            <p className="text-marron text-2xl">Témoignages clients </p>
+            <p className="text-marron text-2xl font-ebGaramond">
+              Témoignages clients{" "}
+            </p>
             <p className="text-blueText text-4xl">Nos clients formidables</p>
           </div>
         </div>
