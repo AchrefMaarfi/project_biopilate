@@ -17,3 +17,16 @@
 .swiper-pagination-bullet-active {
   background: #4F46E5 !important;
 }
+.swiper-pagination-bullet {
+  background-color: #ccc;
+  width: 12px;
+  height: 12px;
+  display: inline-block;
+  margin: 0 5px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.swiper-pagination-bullet-active {
+  background-color: #756E66; /* marron color */
+}

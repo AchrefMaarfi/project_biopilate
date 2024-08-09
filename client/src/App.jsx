@@ -23,7 +23,7 @@ export default function App() {
           <Route path="/formations" element={<Formations />}></Route>
           <Route path="/blog" element={<Blog />}></Route>
           <Route path="/contact" element={<Contact />}></Route>
-          <Route path="/article" component={<Article />} />
+          <Route path="/blog/:id" element={<Article />} />
         </Routes>
       </BrowserRouter>
       <Footer></Footer>

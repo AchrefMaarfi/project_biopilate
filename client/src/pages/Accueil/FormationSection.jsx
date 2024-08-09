@@ -8,7 +8,7 @@ import "swiper/css/pagination";
 import "../../styles/swiper.css";
 import SwiperCore, { Pagination } from "swiper/core";
 
-export default function Formation() {
+export default function FormationSection() {
   const [currentIndex, setCurrentIndex] = useState(0);
 
   const handlePrevClick = () => {
@@ -66,23 +66,6 @@ export default function Formation() {
   ];
   return (
     <div>
-      {/* <section className="mb-16 flex flex-col justify-center items-center gap-4 md:gap-2">
-        <p className="text-blueText text-2xl font-ebGaramond">
-          Formations professionnelles pour devenir instructeur Pilates
-        </p>
-        <p className=" md:mx-40 text-center ">
-          Explorez les bénéfices de sélectionner notre centre pour votre
-          formation en Pilates : Nos programmes de premier ordre sont dirigés
-          par des instructeurs chevronnés qui vous guideront tout au long de
-          votre parcours.
-        </p>
-        <div className="flex justify-center mt-6 gap-2 2xl:gap-8 overflow-hidden">
-          {formations.map((formation, index) => (
-            <FormationCard key={index} formation={formation} />
-          ))}
-        </div>
-        
-      </section> */}
       <div className="mb-4 flex flex-col justify-center items-center gap-4 md:gap-2">
         <p className="text-blueText text-2xl font-ebGaramond">
           Formations professionnelles pour devenir instructeur Pilates

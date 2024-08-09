@@ -1,8 +1,6 @@
 import React from "react";
-import { useParams } from "react-router-dom";
-// import { articles } from "../../data/articles.json";
 
-export default function Article() {
+export default function BlogSection() {
   const articles = [
     {
       id: 1,
@@ -77,23 +75,5 @@ export default function Article() {
       image: "",
     },
   ];
-  const { id } = useParams(); // Extract the article ID from the URL parameters
-  const article = articles.find((a) => a.id === parseInt(id)); // Find the article using the ID
-
-  if (!article) {
-    return <div>Article not found</div>;
-  }
-  return (
-    <div className="flex flex-col mt-4 mx-8 md:mx-12 mb-12">
-      <p className="text-marron text-6xl leading-snug font-ebGaramond font-bold">
-        Ce n'est pas parce qu'on est vieux qu'on n'a pas besoin ni envie de
-        vacances. 
-      </p>
-      <img
-        src={article.image}
-        alt={article.title}
-        className="rounded-3xl w-full h-[400px] object-cover mt-4"
-      />
-    </div>
-  );
+  return <div>BlogSection</div>;
 }

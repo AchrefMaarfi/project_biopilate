@@ -1,28 +1,28 @@
 import React, { useState } from "react";
 import { MdExpandMore } from "react-icons/md";
+import { BsArrowUpRight } from "react-icons/bs";
 
 export default function FAQ() {
   const faqs = [
     {
-      question: "How many travellers make a Group?",
+      question: "Quels sont les bienfaits du Pilates Prénatal ?",
       answer:
-        "Groups can start at as low as 8 people depending on the travel provider. Plus, there is no size limit or maximum number of passengers. The more, the merrier!",
+        "Le Pilates prénatal est spécialement conçu pour soutenir le corps en mutation de la future maman. Il cible le transverse abdominal, muscle profond qui agit comme un corset naturel, afin de renforcer le soutien central sans solliciter excessivement les muscles abdominaux. Cette approche douce mais efficace favorise une respiration profonde et une harmonie entre le corps et l’esprit, préparant ainsi physiquement et mentalement les femmes à l’accouchement. En outre, le Pilates prénatal aide à gérer les fluctuations émotionnelles fréquentes durant cette période, renforçant la résilience et le bien-être global.",
     },
     {
-      question: "How much is a group discount?",
+      question: "Quels sont les bienfaits du Pilates Postnatal ?",
       answer:
-        "Discounts vary depending on a number of factors, like the size of your group, duration of stay, special activities and more. Discuss your group travel requirements with your agent and they’ll be sure to find you all the discounts your group is eligible for.",
+        "Après l’accouchement, le Pilates postnatal offre de nombreux avantages pour les jeunes mamans. Cette méthode douce et adaptée :<ul><li>·       Cible les muscles sollicités pendant la grossesse.</li><li>·       Renforce le plancher pelvien et les muscles abdominaux profonds.</li><li>·       Améliore la circulation sanguine.</li><li>·       Favorise la relaxation et les étirements profonds.En somme, le Pilates postnatal est un allié précieux pour retrouver forme, équilibre et vitalité après la naissance de bébé</li></ul>",
     },
     {
-      question: "What kinds of groups can travel together?",
+      question: "Qu’est-ce que le Gyrotonic ?",
       answer:
-        "You name it! We have booked all kinds of group travel. We’re happy to arrange friends and family trips, destination weddings, group golf getaways, anniversaries and vow renewals, as well as get-togethers for clubs and other special interest groups.",
+        "Le Gyrotonic est une méthode d’entraînement physique qui s’inspire du Pilates, du yoga, de la danse, du tai-chi et de la natation. Elle se distingue par ses mouvements fluides, circulaires et en spirale, qui étirent et renforcent les muscles tout en améliorant la flexibilité et la mobilité articulaire. Cette pratique se réalise à l’aide d’appareils spécifiques équipés de poulies et de manivelles pour une résistance adaptée, permettant une intégration harmonieuse du corps et de l’esprit. Le Gyrotonic offre ainsi une expérience complète qui favorise un bien-être physique global.",
     },
     {
-      question:
-        "Are there group travel benefits beyond discounted airfare and accommodation?",
+      question: "Qu’est-ce-que la méthode STOTT PILATES ?",
       answer:
-        "Yes! For starters, groups can take advantage of flexible payment options, often with lower deposits required to secure each booking. In addition to discounts up-front, your group may be eligible for complimentary passengers, and qualify for more flexible terms. Be sure to ask your agent for details! Ask your Travel Professional for details!",
+        "La méthode STOTT PILATES est une approche moderne et complète du Pilates, axée sur la sécurité, l’efficacité et la conscience corporelle.  Elle est bien plus qu’un simple entraînement physique ; c’est une approche holistique qui prend en compte l’anatomie, la respiration et la qualité du mouvement pour un bien-être global.",
     },
   ];
 
@@ -46,7 +46,7 @@ export default function FAQ() {
             >
               <div className="flex items-center">
                 <span className="q-mark font-bold text-marron mr-4">Q.</span>
-                <p className="question text-lg text-gray-600 m-0">
+                <p className="question text-lg font-semibold m-0 font-ebGaramond">
                   {faq.question}
                 </p>
               </div>
@@ -67,7 +67,16 @@ export default function FAQ() {
                 openIndex === index ? "max-h-screen" : "max-h-0"
               }`}
             >
-              <p className="answer text-base text-gray-600 p-4">{faq.answer}</p>
+              <p
+                className="answer text-base text-gray-600 p-4"
+                dangerouslySetInnerHTML={{
+                  __html: faq.answer,
+                }}
+              ></p>
+              <button className="text-lg text-blueText p-4 font-ebGaramond font-bold flex items-center gap-2">
+                <p>Découvrir plus de détails</p>
+                <BsArrowUpRight />
+              </button>
             </div>
           </div>
         ))}

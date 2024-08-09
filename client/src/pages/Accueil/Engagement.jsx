@@ -22,7 +22,7 @@ export default function Engagement() {
             className="custom-half-circle-left h-[314px] shadow-lg pt-4"
           />
         </div>
-        <div className="grid grid-cols-1 grid-rows-2 md:grid-cols-2 gap-y-16 gap-x-16 md:gap-y-6 xl:gap-y-0 lg:gap-x-6 w-[90%] 2xl:w-[60%]">
+        <div className="grid grid-cols-1 grid-rows-2 md:grid-cols-2 gap-y-16 gap-x-16 md:gap-y-6 xl:gap-y-4 lg:gap-x-6 w-[90%] 2xl:w-[60%]">
           <div className="flex items-center self-center gap-4  ">
             <div>
               <div className="bg-bgColor rounded-full w-[36px] h-[36px] absolute mt-[-8px] z-[-1]"></div>
@@ -58,7 +58,7 @@ export default function Engagement() {
                 />
               </svg>
             </div>
-            Amélioration de la condition physique et de la santé.{" "}
+            Diminution du stress et amélioration du bien être.{" "}
           </div>
           <div className="flex items-center self-center gap-4  ">
             <div>
@@ -76,7 +76,7 @@ export default function Engagement() {
                 />
               </svg>
             </div>
-            Amélioration de la condition physique et de la santé.{" "}
+            Renforcement musculaire et gain de souplesse.{" "}
           </div>
           <div className="flex items-center self-center gap-4  ">
             <div>
@@ -94,7 +94,7 @@ export default function Engagement() {
                 />
               </svg>
             </div>
-            Amélioration de la condition physique et de la santé.{" "}
+            Acquisition de compétences professionnelles.{" "}
           </div>
         </div>
       </div>

@@ -1,29 +1,89 @@
 import React from "react";
 import ServiceCard from "../../components/ServiceCard";
 import { FaArrowLeftLong, FaArrowRightLong } from "react-icons/fa6";
-import Temoignage from "./Temoignage";
 import Hero from "./Hero";
 import Engagement from "./Engagement";
 import CallToActionImg from "./CallToActionImg";
 import BlogCard from "../../components/BlogCard";
 import FAQ from "./FAQ";
 import "../../../src/App.css";
-import Formation from "./Formation";
+import TemoignagesSection from "./TemoignagesSection";
+import FormationSection from "./FormationSection";
 
-// const services = [
-//   {
-//     title: "Cours Reformer",
-//     description: "Force et souplesse unies",
-//   },
-//   {
-//     title: "Cours Reformer & Gyrotonic",
-//     description: "Synergie et équilibre",
-//   },
-//   {
-//     title: "Cours Reformer ,Gyrotonic et Evolis",
-//     description: "Trio dynamique pour vitalité",
-//   },
-// ];
+const articles = [
+  {
+    id: 1,
+    title: "La maison vieille",
+    ecrivain: "Véronique Fournier",
+    description:
+      "La Maison Vieille est un lieu de soutien et de bien-être pour les personnes âgées, visant à briser leur isolement et à offrir des moments enrichissants.",
+    jaimes: 49,
+    image: require("../../images/article-1.png"),
+  },
+  {
+    id: 2,
+    title: "Le Pilates pour les débutants : 5 conseils pour bien commencer",
+    ecrivain: "Par Biopilates",
+    description:
+      "Vous êtes débutant en Pilates et vous vous demandez comment bien commencer ? Découvrez nos 5 conseils pour débuter le Pilates en toute sérénité et profiter pleinement de ses bienfaits.",
+    jaimes: 39,
+    image: "",
+  },
+  {
+    id: 3,
+    title: "Le Pilates pour les débutants : 5 conseils pour bien commencer",
+    ecrivain: "Par Biopilates",
+    description:
+      "Vous êtes débutant en Pilates et vous vous demandez comment bien commencer ? Découvrez nos 5 conseils pour débuter le Pilates en toute sérénité et profiter pleinement de ses bienfaits.",
+    jaimes: 67,
+    image: "",
+  },
+  {
+    id: 4,
+    title: "Le Pilates pour les débutants : 5 conseils pour bien commencer",
+    ecrivain: "Par Biopilates",
+    description:
+      "Vous êtes débutant en Pilates et vous vous demandez comment bien commencer ? Découvrez nos 5 conseils pour débuter le Pilates en toute sérénité et profiter pleinement de ses bienfaits.",
+    jaimes: 25,
+    image: "",
+  },
+  {
+    id: 5,
+    title: "Le Pilates pour les débutants : 5 conseils pour bien commencer",
+    ecrivain: "Par Biopilates",
+    description:
+      "Vous êtes débutant en Pilates et vous vous demandez comment bien commencer ? Découvrez nos 5 conseils pour débuter le Pilates en toute sérénité et profiter pleinement de ses bienfaits.",
+    jaimes: 49,
+    image: "",
+  },
+  {
+    id: 6,
+    title: "Le Pilates pour les débutants : 5 conseils pour bien commencer",
+    ecrivain: "Par Biopilates",
+    description:
+      "Vous êtes débutant en Pilates et vous vous demandez comment bien commencer ? Découvrez nos 5 conseils pour débuter le Pilates en toute sérénité et profiter pleinement de ses bienfaits.",
+    jaimes: 49,
+    image: "",
+  },
+  {
+    id: 7,
+    title: "Le Pilates pour les débutants : 5 conseils pour bien commencer",
+    ecrivain: "Par Biopilates",
+    description:
+      "Vous êtes débutant en Pilates et vous vous demandez comment bien commencer ? Découvrez nos 5 conseils pour débuter le Pilates en toute sérénité et profiter pleinement de ses bienfaits.",
+    jaimes: 49,
+    image: "",
+  },
+  {
+    id: 8,
+    title: "Le Pilates pour les débutants : 5 conseils pour bien commencer",
+    ecrivain: "Par Biopilates",
+    description:
+      "Vous êtes débutant en Pilates et vous vous demandez comment bien commencer ? Découvrez nos 5 conseils pour débuter le Pilates en toute sérénité et profiter pleinement de ses bienfaits.",
+    jaimes: 49,
+    image: "",
+  },
+];
 
 export default function Accueil() {
   return (
@@ -98,43 +158,12 @@ export default function Accueil() {
       </section>
 
       {/* Formations */}
-      <Formation />
+      <FormationSection />
 
       {/* Engagement */}
       <Engagement />
       {/* Temoignages */}
-      <section className="mb-16 flex flex-col justify-center items-center gap-8">
-        <div className="flex justify-center items-center gap-8">
-          <svg
-            width="111"
-            height="89"
-            viewBox="0 0 111 89"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              opacity="0.4"
-              d="M9.45464 12.8681C-1.00249 24.2174 0.0504303 38.792 0.0836792 38.9583V83.2916C0.0836792 84.7613 0.667534 86.1709 1.70679 87.2101C2.74606 88.2494 4.1556 88.8333 5.62534 88.8333H38.8754C44.9878 88.8333 49.9587 83.8624 49.9587 77.7499V38.9583C49.9587 37.4885 49.3748 36.079 48.3356 35.0397C47.2963 34.0004 45.8868 33.4166 44.417 33.4166H27.3598C27.4769 30.6769 28.2954 28.0131 29.7371 25.6804C32.5523 21.2416 37.8557 18.2103 45.5087 16.6808L49.9587 15.7941V0.166595H44.417C28.9946 0.166595 17.2296 4.43922 9.45464 12.8681ZM70.4518 12.8681C59.9891 24.2174 61.0476 38.792 61.0808 38.9583V83.2916C61.0808 84.7613 61.6647 86.1709 62.7039 87.2101C63.7432 88.2494 65.1527 88.8333 66.6225 88.8333H99.8725C105.985 88.8333 110.956 83.8624 110.956 77.7499V38.9583C110.956 37.4885 110.372 36.079 109.333 35.0397C108.293 34.0004 106.884 33.4166 105.414 33.4166H88.3569C88.474 30.6769 89.2926 28.0131 90.7343 25.6804C93.5494 21.2416 98.8528 18.2103 106.506 16.6808L110.956 15.7941V0.166595H105.414C89.9917 0.166595 78.2267 4.43922 70.4518 12.8681Z"
-              fill="#C4C4C4"
-            />
-          </svg>
-          <div className="flex flex-col justify-center items-center gap-4">
-            <p className="text-marron text-2xl font-ebGaramond">
-              Témoignages clients{" "}
-            </p>
-            <p className="text-blueText text-4xl">Nos clients formidables</p>
-          </div>
-        </div>
-        <div className="flex flex-wrap justify-center gap-4">
-          <Temoignage />
-          <Temoignage />
-        </div>
-        <div className="flex gap-4">
-          <button className="w-4 h-4 rounded-full bg-stone-300"></button>
-          <button className="w-4 h-4 rounded-full bg-marron"></button>
-          <button className="w-4 h-4 rounded-full bg-stone-300"></button>
-        </div>
-      </section>
+      <TemoignagesSection />
       {/* CTA */}
       <section className="mb-16 justify-center items-center w-full h-[200px] md:h-[410px]">
         <img
@@ -165,15 +194,15 @@ export default function Accueil() {
       {/* Blog */}
       <section className="mb-16 flex flex-col justify-center items-center gap-4">
         <div className="flex flex-col justify-center items-center gap-1">
-          <p className="text-2xl">Blog</p>
-          <p className="text-blueText text-xl">
+          <p className="text-2xl font-ebGaramond text-marron font-bold">Blog</p>
+          <p className=" text-xs sm:text-xl max-sm:text-center font-lato">
             Trouvez l'harmonie entre corps et esprit : Bienvenue dans notre
             rubrique blog.
           </p>
         </div>
-        <div className="flex flex-wrap justify-center gap-4">
-          <BlogCard />
-        </div>
+
+        <BlogCard article={articles[0]} />
+
         <div className="flex gap-3 m-3">
           <button className="flex justify-center items-center bg-bgColor rounded-full w-10 h-10">
             <FaArrowLeftLong className="text-marron" />
@@ -187,8 +216,8 @@ export default function Accueil() {
       {/* FAQ */}
       <section className="mb-16 flex flex-col justify-center items-center gap-4">
         <div className="flex flex-col justify-center items-center gap-4">
-          <p className="text-3xl text-marron">FAQ</p>
-          <p className="text-blueText text-2xl">
+          <p className="text-3xl text-marron font-ebGaramond font-bold">FAQ</p>
+          <p className="text-2xl font-ebGaramond">
             Trouvez ici les réponses aux questions fréquemment posées concernant
             les cours de Pilates, les horaires et les modalités d'inscription.
           </p>
